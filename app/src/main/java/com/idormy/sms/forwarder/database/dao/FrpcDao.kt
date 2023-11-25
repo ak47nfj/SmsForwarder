@@ -25,6 +25,7 @@ interface FrpcDao {
     fun get(uid: String): Single<Frpc>
 
     //TODO:允许主线程访问，后面再优化
+    //自己修改
     @Query("SELECT * FROM Frpc where uid=:uid")
     fun getOne(uid: String): Frpc
 
